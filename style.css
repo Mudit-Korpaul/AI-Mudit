@@ -16,7 +16,7 @@ body {
 @media only screen and (max-width: 1119px) {
   #chat-box {
     width: 95vw;
-    height: 95vh;
+    height: 85vh;
     background-color: white;
     border-radius: 20px !important;
     border: 2px;

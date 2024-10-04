@@ -25,14 +25,14 @@ body {
     overflow: hidden;
   }
 
-  /* All texts */
+  /* All visible texts - Montserrat */
   .vfrc-message,
   .vfrc-assistant-info--title,
   .vfrc-assistant-info--description,
-  .vfrc-chat {
+  .vfrc-chat, vfrc-header--title, .vfrc-chat-input textarea {
     font-family: "Montserrat";
   }
-
+  
   /* Chat BG */
   .vfrc-chat--dialog,
   .vfrc-footer {
@@ -132,7 +132,7 @@ body {
   .vfrc-message,
   .vfrc-assistant-info--title,
   .vfrc-assistant-info--description,
-  .vfrc-chat {
+  .vfrc-chat, vfrc-header--title, .vfrc-chat-input textarea {
     font-family: "Montserrat";
   }
 

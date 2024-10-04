@@ -1,0 +1,197 @@
+body {
+  margin: 0;
+}
+
+.bg {
+  background-color: #222831;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Mobile bot styling */
+
+@media only screen and (max-width: 1000px) {
+  #chat-box {
+    width: 95vw;
+    height: 95vh;
+    background-color: white;
+    border-radius: 20px !important;
+    border: 2px;
+    border-color: #222831;
+    box-shadow: 0 0 250px #00adb5;
+    overflow: hidden;
+  }
+
+  /* All texts */
+  .vfrc-message,
+  .vfrc-assistant-info--title,
+  .vfrc-assistant-info--description,
+  .vfrc-chat {
+    font-family: "Montserrat";
+  }
+
+  /* Chat BG */
+  .vfrc-chat--dialog,
+  .vfrc-footer {
+    background-color: #eeeeee;
+  }
+
+  /* Asst info at the top */
+  .vfrc-assistant-info {
+    padding-bottom: 0;
+  }
+
+  /* Description */
+  .vfrc-assistant-info--description {
+    color: #222831;
+    font-size: small;
+  }
+
+  /* Smol texts - date, timestamps */
+  .vfrc-chat--session-time,
+  .vfrc-timestamp {
+    color: #222831;
+    font-family: "Montserrat";
+    visibility: hidden;
+  }
+
+  /* Bot messages */
+  .vfrc-system-response--list .vfrc-message {
+    background-color: #eeeeee;
+    color: #222831;
+    /* font-weight: bold; */
+    /* box-shadow: 0 0 5px #222831; */
+    padding-bottom: 0;
+    padding-left: 10px;
+  }
+
+  /* User Message */
+  .vfrc-user-response--row .vfrc-message {
+    background-color: #222831;
+    color: #eeeeee;
+    box-shadow: 0 0 5px #222831;
+    width: auto;
+    padding-right: 14px;
+  }
+
+  /* All messages */
+  .vfrc-message {
+    font-size: 20;
+    width: 80vw;
+    padding-right: 10px;
+  }
+
+  /* Avatar with bot messages */
+  .vfrc-system-response .vfrc-avatar {
+    box-shadow: 0 0 10px #222831;
+    width: 30px !important;
+    height: 30px;
+  }
+
+  /* Text area */
+  .vfrc-chat-input textarea {
+    color: #222831;
+    font-family: "Montserrat";
+  }
+
+  /* End chat button */
+  .vfrc-button[label="End Chat"] {
+    background-color: #222831;
+  }
+}
+
+/* Desktop bot styling */
+@media only screen and (min-width: 1001px) {
+  #chat-box {
+    width: 45vw;
+    height: 95vh;
+    background-color: white;
+    border-radius: 20px !important;
+    border: 2px;
+    border-color: #222831;
+    box-shadow: 0 0 250px #00adb5;
+    overflow: hidden;
+  }
+
+  /* Chat BG */
+  .vfrc-chat--dialog,
+  .vfrc-footer {
+    background-color: #eeeeee;
+  }
+
+  /* All texts */
+  .vfrc-message,
+  .vfrc-assistant-info--title,
+  .vfrc-assistant-info--description,
+  .vfrc-chat {
+    font-family: "Montserrat";
+  }
+
+  /* Title */
+  .vfrc-assistant-info--title {
+    font-weight: 1000;
+  }
+
+  /* Description */
+  .vfrc-assistant-info--description {
+    color: #222831;
+    font-weight: 500;
+  }
+
+  /* Asst info at the top */
+  .vfrc-assistant-info {
+    padding-bottom: 0;
+  }
+
+  /* Smol texts - date, timestamps */
+  .vfrc-chat--session-time,
+  .vfrc-timestamp {
+    color: #222831;
+    font-family: "Montserrat";
+    visibility: hidden;
+  }
+
+  /* Avatar */
+  .vfrc-avatar {
+    box-shadow: 0 0 10px #222831;
+  }
+
+  /* Avatar next to message */
+  .vfrc-system-response .vfrc-avatar {
+    width: 50px;
+    height: 50px;
+  }
+
+  /* Bot messages */
+  .vfrc-system-response--list .vfrc-message {
+    background-color: #eeeeee;
+    color: #222831;
+    font-weight: bold;
+    /* box-shadow: 0 0 5px #222831; */
+  }
+
+  /* User Message */
+  .vfrc-user-response--row .vfrc-message {
+    background-color: #222831;
+    color: #eeeeee;
+    box-shadow: 0 0 5px #222831;
+  }
+
+  /* Send Button */
+  .vfrc-chat-input label button {
+    background-color: #222831;
+  }
+
+  /* Text area */
+  .vfrc-chat-input textarea {
+    color: #222831;
+  }
+
+  /* End chat button */
+  .vfrc-button[label="End Chat"] {
+    background-color: #222831;
+  }
+}

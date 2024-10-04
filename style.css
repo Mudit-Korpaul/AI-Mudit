@@ -179,6 +179,7 @@ body {
     background-color: #eeeeee;
     color: #222831;
     font-weight: bold;
+    font-size: 18px;
     /* box-shadow: 0 0 5px #222831; */
   }
 
@@ -186,6 +187,7 @@ body {
   .vfrc-user-response--row .vfrc-message {
     background-color: #222831;
     color: #eeeeee;
+    font-size: 18px;
     box-shadow: 0 0 5px #222831;
   }
 

@@ -25,7 +25,7 @@ body {
     overflow: hidden;
   }
 
-  /* All texts */
+  /* All visible texts - Montserrat */
   .vfrc-message,
   .vfrc-assistant-info--title,
   .vfrc-assistant-info--description,

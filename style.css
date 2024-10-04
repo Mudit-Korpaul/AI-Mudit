@@ -13,7 +13,7 @@ body {
 
 /* Mobile bot styling */
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1119px) {
   #chat-box {
     width: 95vw;
     height: 95vh;
@@ -44,10 +44,16 @@ body {
     padding-bottom: 0;
   }
 
+  .vfrc-assistant-info--title {
+    position: absolute;
+    visibility: hidden;
+  }
+
   /* Description */
   .vfrc-assistant-info--description {
     color: #222831;
     font-size: small;
+    width: 60%;
   }
 
   /* Smol texts - date, timestamps */
@@ -104,7 +110,7 @@ body {
 }
 
 /* Desktop bot styling */
-@media only screen and (min-width: 1001px) {
+@media only screen and (min-width: 1120px) {
   #chat-box {
     width: 45vw;
     height: 95vh;
@@ -133,12 +139,15 @@ body {
   /* Title */
   .vfrc-assistant-info--title {
     font-weight: 1000;
+    position: absolute;
+    visibility: hidden;
   }
 
   /* Description */
   .vfrc-assistant-info--description {
     color: #222831;
     font-weight: 500;
+    width: 60%;
   }
 
   /* Asst info at the top */

@@ -14,6 +14,10 @@ body {
 /* Mobile bot styling */
 
 @media only screen and (max-width: 1119px) {
+  .bg {
+    height: 95vh !important;
+  }
+  
   #chat-box {
     width: 95vw;
     height: 85vh;

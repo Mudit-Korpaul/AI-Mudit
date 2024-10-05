@@ -48,6 +48,12 @@ body {
 
   .vfrc-assistant-info--title {
     position: absolute;
+    visibility: hidden !important;
+  }
+
+  .vfrc-footer--watermark {
+    /* position: absolute; */
+    height: 0;
     visibility: hidden;
   }
 

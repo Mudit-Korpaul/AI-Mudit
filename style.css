@@ -15,9 +15,9 @@ body {
 
 @media only screen and (max-width: 1119px) {
   .bg {
-    height: 95vh !important;
+    height: 92.5vh !important;
   }
-  
+
   #chat-box {
     width: 95vw;
     height: 85vh;
@@ -65,7 +65,7 @@ body {
   .vfrc-assistant-info--description {
     color: #222831;
     font-size: small;
-    width: 60%;
+    /* width: 60%; */
   }
 
   /* Smol texts - date, timestamps */

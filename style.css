@@ -15,7 +15,7 @@ body {
 
 @media only screen and (max-width: 1119px) {
   .bg {
-    height: 85vh !important;
+    height: 90vh !important;
   }
   
   #chat-box {

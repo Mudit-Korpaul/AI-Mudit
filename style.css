@@ -35,7 +35,8 @@ body {
   .vfrc-assistant-info--description,
   .vfrc-chat,
   .vfrc-header--title,
-  .vfrc-chat-input textarea {
+  .vfrc-chat-input textarea,
+  .vfrc-chat-input textarea:focus {
     font-family: "Montserrat";
   }
 

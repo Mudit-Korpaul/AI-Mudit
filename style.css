@@ -35,9 +35,13 @@ body {
   .vfrc-assistant-info--description,
   .vfrc-chat,
   .vfrc-header--title,
-  .vfrc-chat-input textarea,
-  .vfrc-chat-input textarea:focus {
+  .vfrc-chat-input textarea:focus,
+  .vfrc-chat-input textarea {
     font-family: "Montserrat";
+  }
+
+  .vfrc-chat-input {
+    font-weight: bolder !important;
   }
 
   /* Chat BG */
@@ -147,8 +151,13 @@ body {
   .vfrc-assistant-info--description,
   .vfrc-chat,
   .vfrc-header--title,
+  .vfrc-chat-input textarea:focus,
   .vfrc-chat-input textarea {
     font-family: "Montserrat";
+  }
+
+  .vfrc-chat-input {
+    font-weight: bolder !important;
   }
 
   /* Title */

@@ -11,11 +11,91 @@ body {
   height: 100vh;
 }
 
-/* Mobile bot styling */
+/* Form styling */
+.chat-box {
+  width: 35vw;
+  height: 55vh;
+  background-color: white;
+  border-radius: 20px !important;
+  border: 2px;
+  border-color: #222831;
+  box-shadow: 0 0 250px #00adb5;
+  overflow: hidden;
+}
 
+body.modal-open div.bg {
+  filter: blur(3px);
+}
+
+.form {
+  position: relative;
+}
+
+.modal-content {
+  height: 55vh;
+}
+
+.modal-header {
+  justify-content: left !important;
+  font-family: "Montserrat";
+  font-weight: bolder !important;
+}
+
+label {
+  font-weight: bolder;
+}
+
+label span {
+  color: red;
+}
+
+input {
+  border-width: 2px !important;
+  border-color: #00adb5 !important;
+  box-shadow: 0 0 5px #00adb5;
+}
+
+button[type="submit"] {
+  background-color: #222831;
+  font-family: "Montserrat";
+}
+
+button[type="submit"]:hover {
+  background-color: #222831;
+  box-shadow: 0 0 15px #222831;
+}
+
+.modal-header img {
+  width: 50px;
+  margin-right: 20px;
+}
+
+h5 {
+  font-weight: bold !important;
+}
+
+form {
+  width: 85%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Montserrat";
+}
+
+.was-validated input {
+  border-color: red !important;
+  box-shadow: 0 0 5px red;
+}
+
+/* Mobile bot styling */
 @media only screen and (max-width: 1119px) {
-  .bg {
+  div.bg {
     height: 92.5vh !important;
+  }
+
+  .modal-content {
+    height: 65vh;
   }
 
   #chat-box {

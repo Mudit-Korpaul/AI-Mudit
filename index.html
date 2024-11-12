@@ -39,14 +39,17 @@
         <div class="modal-content">
           <div class="modal-header">
             <img src="./imgs/favicon-circle.jpg" alt="mudit" />
-            <h2 class="modal-title" id="staticBackdropLabel">Wait a sec! ✋</h2>
+            <h3 class="modal-title" id="staticBackdropLabel">
+              Before you chat with AI Mudit..
+            </h3>
           </div>
           <div class="modal-body">
             <form id="form" class="needs-validation" novalidate>
-              <h5>
-                Before you chat with AI Mudit - I'd want your email..
+              <h4>
+                I'd want your email.
                 <br />
-              </h5>
+                <br />
+              </h4>
               <p>
                 <u>ONLY so I could contact you for your project</u>
                 ;))<br /><br />And I promise, you'll *NEVER* recieve any
@@ -102,7 +105,6 @@
     ></script>
     <script>
       let check = localStorage.getItem("email");
-      console.log(check);
 
       if (check !== "false") {
         // Only show the modal if 'email' is not false or null
@@ -112,53 +114,70 @@
               document.getElementById("staticBackdrop")
             );
             myModal.show();
-            localStorage.setItem("email", "false"); // Set 'email' to false after showing the modal
           }, 3000);
         };
       }
-      var form = document.getElementById("form");
+      function validEmail(email) {
+        const parts = email.split("@");
+        if (parts.length !== 2) return false;
 
+        const [localPart, domainPart] = parts;
+        if (localPart.length === 0 || domainPart.length === 0) return false;
+
+        const domainParts = domainPart.split(".");
+        if (domainParts.length < 2) return false;
+
+        for (let part of domainParts) {
+          if (part.length < 2) return false;
+        }
+
+        return true;
+      }
+      var form = document.getElementById("form");
       form.addEventListener("submit", function (event) {
         event.preventDefault();
         var email = document.getElementById("email").value;
-        console.log(email);
-        // Define the URL and data to be sent
-        const url =
-          "https://hook.eu2.make.com/omm2x1g5hvd3nfj1jx5514coxujbiiw4";
-        const data = { email };
+        if (validEmail(email)) {
+          const url =
+            "https://hook.eu2.make.com/omm2x1g5hvd3nfj1jx5514coxujbiiw4";
+          const data = { email };
 
-        fetch(url, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(data),
-        })
-          .then(async (response) => {
-            if (!response.ok) {
-              const errorData = await response.json().catch(() => null);
-              const errorMessage =
-                (errorData && errorData.message) ||
-                response.statusText ||
-                "Unknown error";
-              throw new Error(
-                `HTTP Error: ${response.status} - ${errorMessage}`
-              );
-            }
-            return response.json();
+          fetch(url, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
           })
-          .then((data) => {
-            console.log("Success:", data);
-          })
-          .catch((error) => {
-            console.error("Error:", error.message);
-          });
-        const myModalEl = document.getElementById("staticBackdrop");
-        const modal = bootstrap.Modal.getOrCreateInstance(myModalEl);
-        modal.hide();
+            .then(async (response) => {
+              if (!response.ok) {
+                const errorData = await response.json().catch(() => null);
+                const errorMessage =
+                  (errorData && errorData.message) ||
+                  response.statusText ||
+                  "Unknown error";
+                throw new Error(
+                  `HTTP Error: ${response.status} - ${errorMessage}`
+                );
+              }
+              return response.json();
+            })
+            .then((data) => {
+              console.log("Success:", data);
+            })
+            .catch((error) => {
+              console.error("Error:", error.message);
+            });
+          localStorage.setItem("email", "false"); // Set 'email' to false after showing the modal
+          const myModalEl = document.getElementById("staticBackdrop");
+          const modal = bootstrap.Modal.getOrCreateInstance(myModalEl);
+          modal.hide();
+        } else {
+          form.classList.add("was-validated");
+        }
       });
     </script>
-    <script>
+    <!-- <script>
       // Example starter JavaScript for disabling form submissions if there are invalid fields
       (function () {
         "use strict";
@@ -174,6 +193,48 @@
               if (!form.checkValidity()) {
                 event.preventDefault();
                 event.stopPropagation();
+                form.addEventListener("submit", function (event) {
+                  event.preventDefault();
+                  var email = document.getElementById("email").value;
+                  console.log(email);
+                  // Define the URL and data to be sent
+                  const url =
+                    "https://hook.eu2.make.com/omm2x1g5hvd3nfj1jx5514coxujbiiw4";
+                  const data = { email };
+
+                  fetch(url, {
+                    method: "POST",
+                    headers: {
+                      "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(data),
+                  })
+                    .then(async (response) => {
+                      if (!response.ok) {
+                        const errorData = await response
+                          .json()
+                          .catch(() => null);
+                        const errorMessage =
+                          (errorData && errorData.message) ||
+                          response.statusText ||
+                          "Unknown error";
+                        throw new Error(
+                          `HTTP Error: ${response.status} - ${errorMessage}`
+                        );
+                      }
+                      return response.json();
+                    })
+                    .then((data) => {
+                      console.log("Success:", data);
+                    })
+                    .catch((error) => {
+                      console.error("Error:", error.message);
+                    });
+                  localStorage.setItem("email", "false"); // Set 'email' to false after showing the modal
+                  const myModalEl = document.getElementById("staticBackdrop");
+                  const modal = bootstrap.Modal.getOrCreateInstance(myModalEl);
+                  modal.hide();
+                });
               }
 
               form.classList.add("was-validated");
@@ -182,6 +243,6 @@
           );
         });
       })();
-    </script>
+    </script> -->
   </body>
 </html>

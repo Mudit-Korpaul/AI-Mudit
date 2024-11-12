@@ -12,16 +12,6 @@ body {
 }
 
 /* Form styling */
-.chat-box {
-  width: 35vw;
-  height: 55vh;
-  background-color: white;
-  border-radius: 20px !important;
-  border: 2px;
-  border-color: #222831;
-  box-shadow: 0 0 250px #00adb5;
-  overflow: hidden;
-}
 
 body.modal-open div.bg {
   filter: blur(3px);
@@ -32,7 +22,16 @@ body.modal-open div.bg {
 }
 
 .modal-content {
-  height: 55vh;
+  height: auto;
+}
+
+.modal-body {
+  padding: 40px 0 40px 0;
+}
+
+.modal-body h4 {
+  text-align: center;
+  font-weight: 600;
 }
 
 .modal-header {
@@ -76,10 +75,7 @@ h5 {
 
 form {
   width: 85%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin: auto;
   font-family: "Montserrat";
 }
 
@@ -95,7 +91,11 @@ form {
   }
 
   .modal-content {
-    height: 65vh;
+    height: auto;
+  }
+
+  .modal-body {
+    padding: 35 0 35 0;
   }
 
   #chat-box {

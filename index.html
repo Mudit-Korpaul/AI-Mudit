@@ -137,7 +137,7 @@
       form.addEventListener("submit", function (event) {
         event.preventDefault();
         var email = document.getElementById("email").value;
-        if (validEmail(email)) {
+        if (email != null && validEmail(email)) {
           const url =
             "https://hook.eu2.make.com/omm2x1g5hvd3nfj1jx5514coxujbiiw4";
           const data = { email };
